@@ -539,8 +539,6 @@
 
     CookiePopup.prototype.revokeChoice = function(preventOpen) {
       this.options.enabled = true;
-      this.clearStatus();
-
       this.options.onRevokeChoice.call(this);
 
       if (!preventOpen) {
@@ -561,7 +559,7 @@
 
     // opens the popup if no answer has been given
     CookiePopup.prototype.autoOpen = function(options) {
-      if (!this.hasAnswered() && this.options.enabled) {
+      if (this.options.enabled) {
         this.open();
       } else if (this.hasAnswered() && this.options.revokable) {
         this.toggleRevokeButton(true);
