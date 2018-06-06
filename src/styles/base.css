@@ -9,9 +9,6 @@
   font-size: 16px; /* by setting the base font here, we can size the rest of the popup using CSS `em` */
   line-height: 1.5em;
 
-  display: flex;
-  flex-wrap: nowrap;
-
   /* the following are random unjustified styles - just because - should probably be removed */
   z-index: 9999;
 }
